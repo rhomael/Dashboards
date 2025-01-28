@@ -65,7 +65,7 @@ df_filtered = df[df["Month"] == month]
 # Layout de gráficos
 col1, col2, col3 = st.columns(3)
 col4, col5, col6 = st.columns(3)
-col7, col8 = st.columns(2)
+col7, col8, col9 = st.columns(3)
 
 # Gráfico 1: Clientes com chamados encerrados
 client_counts = df_filtered["Cliente"].value_counts().reset_index()
@@ -128,3 +128,11 @@ fig_pops = px.bar(pop_counts, x="POP", y="Chamados", color="Chamados",
                    title="POPs que mais encerraram chamados",
                    text="Chamados")
 col8.plotly_chart(fig_pops, use_container_width=True)
+
+# Gráfico 9: Usuários que mais abriram chamados
+user_counts = df_filtered["Usuário"].value_counts().reset_index()
+user_counts.columns = ["Usuário", "Chamados"]
+fig_users = px.bar(user_counts, x="Usuário", y="Chamados", color="Usuário",
+                   title="Usuários que mais abriram chamados",
+                   text="Chamados")
+col9.plotly_chart(fig_users, use_container_width=True)
