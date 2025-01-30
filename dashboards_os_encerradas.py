@@ -109,7 +109,7 @@ col5.plotly_chart(fig_encerradas, use_container_width=True)
 # Gráfico 6: Técnicos que mais encerram chamados
 final_counts = df_filtered["Finalizado Por"].value_counts().reset_index()
 final_counts.columns = ["Finalizado Por", "Chamados"]
-fig_finals = px.area(final_counts, x="Finalizado Por", y="Chamados", color="Chamados",
+fig_finals = px.bar(final_counts, x="Finalizado Por", y="Chamados", color="Finalizado Por",
                    title="Usuários que mais encerraram chamados",
                    text="Chamados")
 col6.plotly_chart(fig_finals, use_container_width=True)
