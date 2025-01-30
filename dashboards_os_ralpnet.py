@@ -49,6 +49,12 @@ except UnicodeDecodeError:
     st.error("Erro ao carregar o arquivo. Verifique a codificação do arquivo CSV.")
     st.stop()
 
+with st.expander("Data Preview"):
+    st.dataframe(
+        df,
+        column_config={"Year": st.column_config.NumberColumn(format="%d")},
+    )
+
 # Renomear as colunas manualmente
 df.columns = [
     "Protocolo", "ID Cliente", "ID Contrato", "Cliente", "Tipo", "Classificações", "Metodo",
