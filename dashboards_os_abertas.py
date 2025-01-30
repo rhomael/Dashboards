@@ -109,7 +109,7 @@ col5.plotly_chart(fig_criadas, use_container_width=True)
 # Gráfico 6: Usuários que mais abriram chamados
 user_counts = df_filtered["Usuário"].value_counts().reset_index()
 user_counts.columns = ["Usuário", "Chamados"]
-fig_users = px.bar(user_counts, x="Usuário", y="Chamados", color="Chamados",
+fig_users = px.bar(user_counts, x="Usuário", y="Chamados", color="Usuário",
                    title="Usuários que mais abriram chamados",
                    text="Chamados")
 col6.plotly_chart(fig_users, use_container_width=True)
