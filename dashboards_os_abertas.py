@@ -111,7 +111,7 @@ user_counts = df_filtered["Usuário"].value_counts().reset_index()
 user_counts.columns = ["Usuário", "Chamados"]
 fig_users = px.area(user_counts, x="Usuário", y="Chamados", color="Chamados",
                    title="Usuários que mais abriram chamados",
-                   text="Chamados")
+                   text="Usuário")
 col6.plotly_chart(fig_users, use_container_width=True)
 
 # Gráfico 7: Bairros que mais abriram chamados
