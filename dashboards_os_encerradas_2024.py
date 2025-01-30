@@ -12,7 +12,7 @@ st.title("Dashboard de Ordens de Serviços Encerradas 2024")
 st.markdown("### Vizualize os principais indicadores!")
 
 # URL do dashboard (substitua pelo link do seu Streamlit)
-dashboard_url = "https://dashboards-os-encerradas-jan.streamlit.app/"  # Insira o link da sua aplicação aqui
+dashboard_url = "https://dashboards_os_encerradas_2024.streamlit.app/"  # Insira o link da sua aplicação aqui
 
 # Gerar QR Code
 qr = qrcode.QRCode(box_size=10, border=4)
