@@ -70,7 +70,7 @@ col7, col8, col9 = st.columns(3)
 # Gráfico 1: Clientes com chamados encerrados
 client_counts = df_filtered["Cliente"].value_counts().reset_index()
 client_counts.columns = ["Cliente", "Chamados"]
-fig_clients = px.bar(client_counts, x="Cliente", y="Chamados", color="Cliente",
+fig_clients = px.bar(client_counts, x="Cliente", y="Chamados", color="Chamados",
                      title="Clientes que mais encerraram chamados",
                      text="Chamados")
 col1.plotly_chart(fig_clients, use_container_width=True)
